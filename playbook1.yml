@@ -1,14 +1,6 @@
 ---
-- name: Find out stuff
+- name: Lesson 1
   hosts: all
   connection: local
-  tasks:
-  - name: Find the hostaname
-    debug:
-     var: ansible_hostname
-  - name: Find the IPv4 Address
-    debug: var=ansible_default_ipv4.address
-  - name: Copy a file
-    copy:
-     content: "The content of the file"
-     dest: "/tmp/sakhi.txt"
+  roles:
+  - bootcamp
