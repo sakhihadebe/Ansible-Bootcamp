@@ -23,7 +23,8 @@ install:
 
 script:
   # Basic role syntax check
+  - cd roles/bootcamp
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
-
+  - ansible-playbook test/test.yml -i test/inventory -c local
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
